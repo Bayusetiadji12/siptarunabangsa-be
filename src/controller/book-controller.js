@@ -60,8 +60,6 @@ const createBook = async (req, res, next) => {
       }
     }
 
-    console.log("📦 Final categories = ", categories);
-
     const result = await bookService.createBook(request, cover, categories);
     res.status(201).json({
       data: result,
@@ -91,9 +89,6 @@ const updateBook = async (req, res, next) => {
 
     const cover = req.file;
     const removeCover = req.body.removeCover === "true" || req.body.removeCover === true;
-
-    console.log("req.body.categories =", req.body.categories);
-    console.log("req.body.category =", req.body.category);
 
     // Proses parsing kategori
     let categories = [];
