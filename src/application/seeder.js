@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   const existingAdmin = await prisma.user.findUnique({
-    where: { email: 'admin@example.com' },
+    where: { email: 'admin@gmail.com' },
   });
 
   if (!existingAdmin) {
@@ -14,7 +14,7 @@ async function main() {
     await prisma.user.create({
       data: {
         name: 'Admin',
-        email: 'admin@example.com',
+        email: 'admin@gmail.com',
         password: hashedPassword,
         nis: "098228231721",
         phone: "0812211761",

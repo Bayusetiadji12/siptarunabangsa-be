@@ -96,6 +96,7 @@ const getUserProfile = async (userId) => {
       id: userId,
     },
     select: {
+      id: true, 
       name: true,
       email: true,
       nis: true,

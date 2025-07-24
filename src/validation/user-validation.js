@@ -26,7 +26,7 @@ const getAllUserValidation = Joi.object({
 const updateUserValidation = Joi.object({
   name: Joi.string().max(100).required(),
   email: Joi.string().max(100).email().required(),
-  password: Joi.string().max(100).required(),
+  password: Joi.string().max(100).optional(),
   nis: Joi.string().max(20).required(),
   phone: Joi.string().max(20).required(),
   gender: Joi.string().valid("LAKI_LAKI", "PEREMPUAN").required(),
